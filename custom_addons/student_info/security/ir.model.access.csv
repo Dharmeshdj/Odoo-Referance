@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_manager_approve_info,student_info_manager_info,model_student_information,student_info.Education_manager,1,1,1,1
+access_manager_approve_edu,student_info_manager_edu,model_education_detail,student_info.Education_manager,1,1,1,1
+access_student_info_student_info,student_info_student_info,model_student_information,student_info.student,1,1,1,0
+access_student_info_student_info1,student_info_student_info1,model_education_detail,student_info.student,1,1,1,0

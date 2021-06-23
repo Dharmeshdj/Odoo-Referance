@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.module.category" id="student_regitration">
+            <field name="name">Registration module</field>
+        </record>
+        <record model="ir.module.category" id="registration_acess">
+            <field name="name">Regitration access</field>
+            <field name="description">User access level for registration module</field>
+            <field name="sequence">10</field>
+            <field name="parent_id" ref="student_info.student_regitration"/>
+        </record>
+        <record model="ir.module.category" id="verfy_acess">
+            <field name="name">veryfiacess access</field>
+            <field name="description">User access level for registration module</field>
+            <field name="sequence">10</field>
+            <field name="parent_id" ref="student_info.student_regitration"/>
+        </record>
+        <record id="student" model="res.groups">
+            <field name="name">student</field>
+            <field name="category_id" ref="student_info.registration_acess"/>
+        </record>
+        <record id="Education_manager" model="res.groups">
+            <field name="name">Education Manager</field>
+            <field name="category_id" ref="registration_acess"/>
+            <field name="implied_ids" eval="[(4, ref('student'))]"/>
+        </record>
+        <record id="Education_officer" model="res.groups">
+            <field name="name">Education officer</field>
+            <field name="category_id" ref="registration_acess"/>
+            <field name="implied_ids" eval="[(4, ref('Education_manager'))]"/>
+        </record>
+        <!--    setting the rules for student-->
+        <record model="ir.rule" id="rule_for_student">
+            <field name="name">Student can see only his/her Record</field>
+            <field name="model_id" ref="model_student_information"/>
+            <field name="groups" eval="[(4, ref('student_info.student'))]"/>
+            <field name="domain_force">[('login_user', '=', user.id)]</field>
+            <!-- <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/> -->
+        </record>
+        <record model="ir.rule" id="rules_for_Manager">
+            <field name="name">Education_manager only aprrove see all</field>
+            <field name="model_id" ref="model_student_information"/>
+            <field name="groups" eval="[(4, ref('student_info.Education_manager'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <!-- <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/> -->
+        </record>
+        <record id="Dheckhsakte_ho" model="res.groups">
+            <field name="name">Dekho</field>
+        </record>
+    </data>
+</odoo>

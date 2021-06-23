@@ -1,0 +1,257 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* student_info
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-04 11:03+0000\n"
+"PO-Revision-Date: 2021-06-04 11:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: student_info
+#: model:ir.model.fields.selection,name:student_info.selection__student_information__state__approved
+#: model_terms:ir.ui.view,arch_db:student_info.student_info_form
+msgid "Approved"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields.selection,name:student_info.selection__student_information__state__cancel
+#: model_terms:ir.ui.view,arch_db:student_info.student_info_form
+msgid "Cancel"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model,name:student_info.model_res_partner
+msgid "Contact"
+msgstr "से संपर्क करें"
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_student_information__Country_id
+msgid "Country"
+msgstr "देश"
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_education_detail__create_uid
+#: model:ir.model.fields,field_description:student_info.field_student_information__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_education_detail__create_date
+#: model:ir.model.fields,field_description:student_info.field_student_information__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_education_detail__degree
+#: model_terms:ir.ui.view,arch_db:student_info.student_info_form
+msgid "Degree"
+msgstr ""
+
+#. module: student_info
+#: model:res.groups,name:student_info.Dheckhsakte_ho
+msgid "Dekho"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_account_move__display_name
+#: model:ir.model.fields,field_description:student_info.field_education_detail__display_name
+#: model:ir.model.fields,field_description:student_info.field_res_partner__display_name
+#: model:ir.model.fields,field_description:student_info.field_sale_order__display_name
+#: model:ir.model.fields,field_description:student_info.field_student_information__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields.selection,name:student_info.selection__student_information__state__draft
+#: model_terms:ir.ui.view,arch_db:student_info.student_info_form
+msgid "Draft"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_student_information__edu_ids
+msgid "Edu"
+msgstr ""
+
+#. module: student_info
+#: model_terms:ir.ui.view,arch_db:student_info.student_info_form
+msgid "Education"
+msgstr ""
+
+#. module: student_info
+#: model:res.groups,name:student_info.Education_manager
+msgid "Education Manager"
+msgstr ""
+
+#. module: student_info
+#: model:res.groups,name:student_info.Education_officer
+msgid "Education officer"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_student_information__Email
+msgid "Email"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_account_move__id
+#: model:ir.model.fields,field_description:student_info.field_education_detail__id
+#: model:ir.model.fields,field_description:student_info.field_res_partner__id
+#: model:ir.model.fields,field_description:student_info.field_sale_order__id
+#: model:ir.model.fields,field_description:student_info.field_student_information__id
+msgid "ID"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_education_detail__institute
+#: model_terms:ir.ui.view,arch_db:student_info.student_info_form
+msgid "Institute"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model,name:student_info.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_account_move____last_update
+#: model:ir.model.fields,field_description:student_info.field_education_detail____last_update
+#: model:ir.model.fields,field_description:student_info.field_res_partner____last_update
+#: model:ir.model.fields,field_description:student_info.field_sale_order____last_update
+#: model:ir.model.fields,field_description:student_info.field_student_information____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_education_detail__write_uid
+#: model:ir.model.fields,field_description:student_info.field_student_information__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_education_detail__write_date
+#: model:ir.model.fields,field_description:student_info.field_student_information__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_student_information__login_user
+msgid "Login User"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_student_information__Mobile
+msgid "Mobile"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_student_information__name
+msgid "Name"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_education_detail__pass_year
+#: model_terms:ir.ui.view,arch_db:student_info.student_info_form
+msgid "Pass Year"
+msgstr ""
+
+#. module: student_info
+#: model:ir.ui.menu,name:student_info.student_info_manu
+msgid "Registration Details"
+msgstr ""
+
+#. module: student_info
+#: model:ir.module.category,name:student_info.registration_acess
+msgid "Regitration access"
+msgstr ""
+
+#. module: student_info
+#: model_terms:ir.ui.view,arch_db:student_info.student_info_form
+msgid "Reset"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model,name:student_info.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_account_bank_statement_line__so_referance_acc
+#: model:ir.model.fields,field_description:student_info.field_account_move__so_referance_acc
+#: model:ir.model.fields,field_description:student_info.field_account_payment__so_referance_acc
+msgid "So Referance Acc"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_res_partner__so_referance_res
+#: model:ir.model.fields,field_description:student_info.field_res_users__so_referance_res
+msgid "So Referance Res"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_sale_order__so_referance_sale
+msgid "So Referance Sale"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_student_information__state
+msgid "State"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_education_detail__stu_id
+msgid "Stu"
+msgstr ""
+
+#. module: student_info
+#: model:ir.module.category,name:student_info.student_regitration
+msgid "Student module"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model.fields,field_description:student_info.field_education_detail__total_year
+msgid "Total Year"
+msgstr "देश"
+
+#. module: student_info
+#: model:ir.module.category,description:student_info.registration_acess
+#: model:ir.module.category,description:student_info.verfy_acess
+msgid "User access level for registration module"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model,name:student_info.model_education_detail
+msgid "education.detail"
+msgstr ""
+
+#. module: student_info
+#: model:ir.ui.menu,name:student_info.student_info_nav_bar
+msgid "registation"
+msgstr ""
+
+#. module: student_info
+#: model:res.groups,name:student_info.student
+msgid "student"
+msgstr ""
+
+#. module: student_info
+#: model:ir.actions.act_window,name:student_info.student_manu_action
+msgid "student info"
+msgstr ""
+
+#. module: student_info
+#: model:ir.model,name:student_info.model_student_information
+msgid "student.information"
+msgstr ""
+
+#. module: student_info
+#: model:ir.module.category,name:student_info.verfy_acess
+msgid "veryfiacess access"
+msgstr ""

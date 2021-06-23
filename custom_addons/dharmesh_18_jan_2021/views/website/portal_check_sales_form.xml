@@ -1,0 +1,149 @@
+<odoo>
+    <template id="check_sale_order">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <div class="card">
+                <div class="card-header ">
+                    <h4>
+            Sale Orders
+          </h4>
+                </div>
+                <div class="card-body">
+                    <form action="/my/check_order" method="post" role='form' class="s_website_form">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <div >
+                            <div t-attf-class="form-group col-md-6 ">
+                                <label for="start_date">Start Date
+                                    <span style="color:red">*</span>
+                                </label>
+                                <input type="date" t-att-value='start_date' t-attf-class="form-control" name="start_date" id="start_date" placeholder="Start Date" required='1' />
+                            </div>
+                            <div t-attf-class="form-group  col-md-6 ">
+                                <label for="end_date">End Date
+                                    <span style="color:red">*</span>
+                                </label>
+                                <input type="date" t-att-value='end_nate' t-attf-class="form-control" name="end_date" id="end_date" placeholder="End Date" required='1' />
+                            </div>
+                        </div>
+                        <div t-attf-class="form-group  col-md-6 ">
+                            <label for="status">Status</label>
+                            <select name="status" class="form-control" id="status">
+                                <option t-att-selected='status =="all"' t-attf-value="all">All</option>
+                                <option  t-att-selected='status =="draft"' t-attf-value="draft">Quotation</option>
+                                <option  t-att-selected='status =="sent"' t-attf-value="sent">Quotation Sent</option>
+                                <option  t-att-selected='status =="sale"' t-attf-value="sale">Sale Order</option>
+                                <option  t-att-selected='status =="done"' t-attf-value="done">Locked</option>
+                                <option  t-att-selected='status =="cancel"' t-attf-value="cancel">Cancel</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary ">Submit</button>
+                    </form>
+                </div>
+                <div t-if="methods">
+                    <t t-foreach="orders" t-as="so_ref">
+                        <div class="card text-left">
+                            <div class="card-header">
+                                <span t-field="so_ref.name"/>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h2>List Sales Orders</h2>
+                            <br/>
+                            <br/>
+                            <h4 class="card-title">
+                       Sale Order :
+                                <span t-field="so_ref.name"/>
+                            </h4>
+                            <p class="card-text">Customer :
+                                <span t-esc="so_ref.partner_id.name"/>
+                            </p>
+                            <p class="card-text">Customer Address :
+                                <span t-esc="so_ref.partner_id.street"/>
+,
+                                <span t-esc="so_ref.partner_id.state_id.name"/>
+,
+                                <span t-esc="so_ref.partner_id.country_id.name"/>
+                            </p>
+                            <p class="card-text">Delivery Address :
+                                <span t-esc="so_ref.partner_invoice_id.street"/>
+,
+                                <span t-esc="so_ref.partner_invoice_id.state_id.name"/>
+,
+                                <span t-esc="so_ref.partner_invoice_id.country_id.name"/>
+                            </p>
+                            <p class="card-text">Billing Address :
+                                <span t-esc="so_ref.partner_shipping_id.street"/>
+,
+                                <span t-esc="so_ref.partner_shipping_id.state_id.name"/>
+,
+                                <span t-esc="so_ref.partner_shipping_id.country_id.name"/>
+                            </p>
+                            <h3>
+                        Order Lines:
+                    </h3>
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Product</th>
+                                        <th scope="col">Discription</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Unit Price</th>
+                                        <th scope="col">Taxes</th>
+                                        <th scope="col" class="text-right">Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="so_ref.order_line" t-as="order_lines">
+                                        <tr>
+                                            <td>
+                                                <span t-esc="order_lines.product_id.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="order_lines.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="order_lines.product_uom_qty"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="order_lines.price_unit"/>
+                                            </td>
+                                            <td class="text-right">
+                                                <span t-esc="order_lines.tax_id.name"/>
+                                            </td>
+                                            <td class="text-right">
+                                                <span t-esc="order_lines.price_subtotal"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                                <tfoot>
+                                    <tr class="text-right">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <hr/>
+                                Sub Total :
+                                            <br/>
+                                  Total :
+                                        </td>
+                                        <td>
+                                            <hr/>
+                                            <span t-esc="so_ref.amount_untaxed"/>
+                                            <br/>
+                                            <span t-esc="so_ref.amount_total"/>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <h5>Sales Person :
+                                <span t-esc="so_ref.user_id.name"/>
+                            </h5>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
